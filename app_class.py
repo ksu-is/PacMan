@@ -28,3 +28,26 @@ class App:
         self.background = pygame.transform.scale(self.background, (MAZE_WIDTH, MAZE_HEIGHT))
    
    ############### Video 2 ############################################
+    
+   def load(self):
+        #self.background = pygame.image.load('maze.png')
+        self.background = pygame.image.load('C:\\Users\\Udochi Nwachukwu\\OneDrive\\Documents\\PacmanGame\\maze.png')
+        self.background = pygame.transform.scale(self.background, (MAZE_WIDTH, MAZE_HEIGHT))
+        
+        # Openning walls file
+        # Creatint walls list wihth co-ords of walls
+        with open("C:\\Users\\Udochi Nwachukwu\\OneDrive\\Documents\\PacmanGame\\walls.txt", 'r') as file:
+            for yidx, line in enumerate(file):
+                for xidx, char in enumerate(line):
+                    if char == "1":
+                        self.walls.append(vec(xidx, yidx))
+                    elif char == "C":
+                        self.coins.append(vec(xidx, yidx)) 
+                    elif char == "P":
+                        self.p_pos = [xidx, yidx]
+                    elif char in ["2", "3", "4", "5"]:
+                        self.e_pos.append([xidx, yidx])
+                    elif char == "B":
+                        pygame.draw.rect(self.background, BLACK, (xidx * self.cell_width, yidx * self.cell_height, self.cell_width, self.cell_height))
+    
+    ############### Video 3 ############################################
