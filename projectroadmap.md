@@ -1,3 +1,24 @@
 - [ ] Start on the project 
   - [ ] listen to youtube video walkthrough 1 and 2
   - [ ] find errors and report them
+- [ ] Listen to youtuber video walkthrough 3, 4, and 5
+  - [ ] code in the walkthrogh
+  - [ ] find errors and report them
+- [ ] Listen to youtuber video walkthrough 6, 7, and 8
+  - [ ] code in the walkthrogh
+  - [ ] find errors and report them
+- [ ] Listen to youtuber video walkthrough 9, and 10
+  - [ ] code in the walkthrogh
+  - [ ] find errors and report them
+- [ ] Listen to youtuber video walkthrough 11, 12, and 13
+  - [ ] code in the walkthrogh
+  - [ ] find errors and report them
+- [ ] Listen to youtuber video walkthrough 14, 15, and 16
+  - [ ] code in the walkthrogh
+  - [ ] find errors and report them
+- [ ] Listen to youtuber video walkthrough 18 and 19
+  - [ ] code in the walkthrogh
+  - [ ] find errors and report them
+- [ ] Listen to youtuber video walkthrough 20 and 21
+  - [ ] code in the walkthrogh
+  - [ ] find errors and report them
