@@ -83,3 +83,22 @@ class App:
         self.state = "playing"
 
   ############################ Video 5 ###################################
+######################### INTRO FUNCTIONS ###########################
+
+    def start_events(self):
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                self.running = False
+            if event.type == pygame.KEYDOWN and event.key == pygame.K_SPACE:
+                self.state = 'playing'
+
+    def start_update(self):
+        pass
+    
+    def start_draw(self):
+        self.screen.fill(BLACK)
+        self.draw_text('PUSH SPACE BAR', self.screen, [WIDTH//2, HEIGHT//2-50], START_TEXT_SIZE, (170, 132, 58), START_FONT, centered = True)
+        self.draw_text('1 PLAYER ONLY', self.screen, [WIDTH//2, HEIGHT//2+50], START_TEXT_SIZE, (44, 167, 198), START_FONT, centered = True)
+        self.draw_text('HIGH SCORE', self.screen, [4, 0], START_TEXT_SIZE, (44, 167, 198), START_FONT, centered = True)
+        pygame.display.update()
+################################# Video 8 #######################################
