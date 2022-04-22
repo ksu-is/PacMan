@@ -73,3 +73,9 @@ def draw(self):
             if self.direction == vec(0, 1) or self.direction == vec(0, -1) or self.direction == vec(0, 0):
                 return True
   ################################### Video 7 ##############################################
+
+def can_move(self):
+        for wall in self.app.walls:
+            if vec(self.grid_pos + self.direction) == wall:
+                return False
+        return True
