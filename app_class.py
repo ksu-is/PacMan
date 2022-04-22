@@ -124,3 +124,33 @@ class App:
         for enemy in self.enemies:
             enemy.update()
 ############################ Video 9 ######################################
+
+def playing_draw(self):
+        self.screen.fill(BLACK)
+        self.screen.blit(self.background, (TOP_BOTTOM_BUFFER//2, TOP_BOTTOM_BUFFER//2))
+        self.draw_coins()
+        #self.draw_grid()
+        self.draw_text('CURRENT SCORE: {}'.format(self.player.current_score), self.screen, [60, 0], 18, WHITE, START_FONT)
+        self.draw_text('HIGH SCORE: 0', self.screen, [WIDTH//2 + 60, 0], 18, WHITE, START_FONT)
+        self.player.draw()
+        for enemy in self.enemies:
+            enemy.draw()
+        pygame.display.update()
+
+    def remove_life(self):
+        self.player.lives -= 1
+        if self.player.lives == 0:
+            self.state = "game over"
+        else:
+            self.player.grid_pos = vec(self.player.starting_pos)
+            self.player.pix_pos = self.player.get_pix_pos()
+            self.player.direction *= 0
+            for enemy in self.enemies:
+                enemy.grid_pos = vec(enemy.starting_pos)
+                enemy.pix_pos = enemy.get_pix_pos()
+                enemy.direction *= 0
+
+    def draw_coins(self):
+        for coin in self.coins:
+            pygame.draw.circle(self.screen, (124, 123, 7), (int(coin.x * self.cell_width) + self.cell_width//2 + TOP_BOTTOM_BUFFER//2, int(coin.y * self.cell_height) + self.cell_height//2 + TOP_BOTTOM_BUFFER//2), 5)
+################################### Video 12, 13, and 14 ###########################################
