@@ -177,3 +177,5 @@ def playing_draw(self):
         self.draw_text(again_text, self.screen, [WIDTH//2, HEIGHT//2], 36, (190, 190, 190), "arial", centered = True)
         self.draw_text(quit_text, self.screen, [WIDTH//2, HEIGHT//1.5], 36, (190, 190, 190), "arial", centered = True)
         pygame.display.update()
+        
+  ################################# Video 14, 15, 16, and 17 ######################################
